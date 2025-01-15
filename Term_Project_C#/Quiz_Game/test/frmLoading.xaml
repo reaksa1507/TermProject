@@ -1,0 +1,31 @@
+﻿<Window x:Class="QuizGame.frmLoading"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuizGame"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        Title="frmLoading" Height="450" Width="700">
+    <Grid>
+        <Image Source="/Image/Loading.jpg"
+           Stretch="Fill"/>
+
+        <StackPanel VerticalAlignment="Bottom"> 
+            <ProgressBar Name="PgBar"
+                         Height="18"
+                         Width="1100"
+                         Margin="0,0,0,5"
+                         ValueChanged="PgBar_ValueChanged"
+                         Maximum="100"/>
+
+            <Label x:Name="lbProgress"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,70" 
+                   FontSize="30"
+                   FontWeight="Bold"
+                   Foreground="White"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
